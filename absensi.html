@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAN 10 Tasikmalaya</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="absensi">
+
+  <header class="Doniza_topbar">
+    <div class="Doniza_topbar_left">
+      <button id="Doniza_menuBtn" class="Doniza_menu_btn" aria-label="Buka/tutup menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <span class="Doniza_brand">SMAN 10 TASIKMALAYA</span>
+    </div>
+    <div class="Doniza_topbar_user">
+      <span class="Doniza_d_none_sm">Administrator</span>
+      <div class="Doniza_avatar">AD</div>
+    </div>
+  </header>
+
+  <div class="Doniza_layout">
+    <aside id="Doniza_sidebar" class="Doniza_sidebar">
+      <nav>
+        <a href="index.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="siswa.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-users"></i>
+          <span>Siswa</span>
+        </a>
+        <a href="guru.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Guru</span>
+        </a>
+        <a href="jadwal.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jadwal</span>
+        </a>
+        <a href="absensi.html" class="Doniza_nav_link Doniza_active">
+          <i class="fa-solid fa-square-check"></i>
+          <span>Absensi</span>
+        </a>
+        <a href="nilai.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Nilai</span>
+        </a>
+        <a href="laporan.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Laporan</span>
+        </a>
+        <a href="kontak.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Kontak</span>
+        </a>
+      </nav>
+      <a href="login.html" class="Doniza_nav_link Doniza_nav_logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </aside>
+
+    <main class="Doniza_content">
+      <h1 class="Doniza_page_title" style="margin-bottom:32px">Absensi Siswa</h1>
+
+      <div id="Doniza_notif"></div>
+
+    <div class="Doniza_filter_card">
+      <span class="Doniza_label">Jurusan:</span>
+      <div class="Doniza_pills" id="Doniza_pillsJurusan">
+        <button type="button" class="Doniza_pill Doniza_active" data-value="1">IPA</button>
+        <button type="button" class="Doniza_pill" data-value="2">IPS</button>
+      </div>
+    </div>
+
+      <div class="Doniza_filters Doniza_end">
+        <div class="Doniza_filter_item Doniza_col">
+          <label for="Doniza_tanggal">Tanggal :</label>
+          <input type="date" id="Doniza_tanggal" class="Doniza_input" style="width:192px">
+        </div>
+        <div class="Doniza_filter_item Doniza_col">
+          <label for="Doniza_selKelas">Kelas :</label>
+          <select id="Doniza_selKelas" class="Doniza_select Doniza_min_w"></select>
+        </div>
+      </div>
+
+      <div class="Doniza_save_row">
+        <button type="button" id="Doniza_btnSimpan" class="Doniza_btn Doniza_btn_dark" style="padding-left:32px;padding-right:32px">
+          <i class="fa-solid fa-floppy-disk"></i> Simpan Absensi
+        </button>
+      </div>
+
+      <div class="Doniza_table_card">
+        <div class="Doniza_table_wrap">
+          <table class="Doniza_data">
+            <thead>
+              <tr>
+                <th class="Doniza_c" style="width:80px">No</th>
+                <th>NIS</th>
+                <th>Nama</th>
+                <th class="Doniza_c" style="width:160px">Status</th>
+              </tr>
+            </thead>
+            <tbody id="Doniza_tbodyAbsensi">
+              <tr data-row data-kelas="1" data-nis="12401">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12401</td>
+                <td class="Doniza_strong">Ahmad Fauzi Ramadhan</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="1" data-nis="12402">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12402</td>
+                <td class="Doniza_strong">Aisyah Nur Azizah</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="1" data-nis="12403">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12403</td>
+                <td class="Doniza_strong">Bagas Prasetyo</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="1" data-nis="12404">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12404</td>
+                <td class="Doniza_strong">Citra Dewi Anggraini</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="1" data-nis="12405">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12405</td>
+                <td class="Doniza_strong">Dimas Arya Pratama</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="2" data-nis="12406">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12406</td>
+                <td class="Doniza_strong">Eka Putri Maharani</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="2" data-nis="12407">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12407</td>
+                <td class="Doniza_strong">Fajar Nugraha</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="2" data-nis="12408">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12408</td>
+                <td class="Doniza_strong">Gina Salsabila</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="2" data-nis="12409">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12409</td>
+                <td class="Doniza_strong">Hafidz Maulana</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="2" data-nis="12410">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12410</td>
+                <td class="Doniza_strong">Intan Permatasari</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="4" data-nis="12416">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12416</td>
+                <td class="Doniza_strong">Okta Viani</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="4" data-nis="12417">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12417</td>
+                <td class="Doniza_strong">Putra Wijaya Kusuma</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="4" data-nis="12418">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12418</td>
+                <td class="Doniza_strong">Qonita Fadhilah</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="4" data-nis="12419">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12419</td>
+                <td class="Doniza_strong">Rizal Anwar</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="4" data-nis="12420">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12420</td>
+                <td class="Doniza_strong">Sinta Nuraeni</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="3" data-nis="12411">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12411</td>
+                <td class="Doniza_strong">Jaka Permana</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="3" data-nis="12412">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12412</td>
+                <td class="Doniza_strong">Kirana Azzahra</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="3" data-nis="12413">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12413</td>
+                <td class="Doniza_strong">Lutfi Hakim</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="3" data-nis="12414">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12414</td>
+                <td class="Doniza_strong">Maya Sari Utami</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="3" data-nis="12415">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12415</td>
+                <td class="Doniza_strong">Naufal Rizky Firmansyah</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="5" data-nis="12421">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12421</td>
+                <td class="Doniza_strong">Taufik Hidayat</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="5" data-nis="12422">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12422</td>
+                <td class="Doniza_strong">Ulfa Rahmawati</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="5" data-nis="12423">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12423</td>
+                <td class="Doniza_strong">Vina Melati</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="5" data-nis="12424">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12424</td>
+                <td class="Doniza_strong">Wahyu Ramdani</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr data-row data-kelas="5" data-nis="12425">
+                <td class="Doniza_text_center Doniza_muted">1</td>
+                <td>12425</td>
+                <td class="Doniza_strong">Yusuf Abdurrahman</td>
+                <td class="Doniza_text_center">
+                  <select class="Doniza_status_select Doniza_s_hadir">
+                    <option value="Hadir" selected>Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="Doniza_empty_row" hidden><td colspan="4">Tidak ada data siswa untuk kriteria kelas dan jurusan ini.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

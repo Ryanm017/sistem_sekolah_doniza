@@ -1,0 +1,52 @@
+/* Gaya halaman cetak laporan (kop surat, tabel, tanda tangan) */
+
+* { box-sizing: border-box; }
+body { font-family: sans-serif; font-size: 12px; color: #333; padding: 20px; line-height: 1.4; margin: 0; }
+
+.Doniza_print_toolbar { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 16px; }
+.Doniza_print_toolbar button {
+  padding: 8px 16px; border: 0; border-radius: 6px; background: #1877f2; color: #fff;
+  font-size: 12px; font-weight: bold; cursor: pointer;
+}
+.Doniza_print_toolbar button.Doniza_secondary { background: #e5e7eb; color: #374151; }
+
+.Doniza_kop_surat { display: flex; align-items: center; border-bottom: 3px double #000; padding-bottom: 10px; margin-bottom: 20px; }
+.Doniza_logo_kop { width: 80px; height: auto; margin-right: 20px; }
+.Doniza_text_kop { flex: 1; text-align: center; margin-right: 80px; }
+.Doniza_text_kop h2 { margin: 0; font-size: 18px; text-transform: uppercase; line-height: 1.3; }
+.Doniza_text_kop p { margin: 4px 0 0 0; font-size: 11px; color: #556; }
+
+.Doniza_judul { text-align: center; text-transform: uppercase; margin: 0 0 15px; font-size: 15px; }
+.Doniza_judul.Doniza_lg { margin-bottom: 25px; letter-spacing: .5px; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+table.Doniza_simple, table.Doniza_simple th, table.Doniza_simple td { border: 1px solid #000; }
+table.Doniza_simple th { padding: 8px; background: #f2f2f2; font-weight: bold; text-transform: uppercase; font-size: 11px; }
+table.Doniza_simple td { padding: 6px; }
+
+table.Doniza_info_siswa { width: 100%; margin-bottom: 20px; }
+table.Doniza_info_siswa td { padding: 4px 0; font-size: 13px; }
+table.Doniza_info_siswa td.Doniza_label { width: 15%; font-weight: bold; }
+table.Doniza_info_siswa td.Doniza_titik { width: 2%; }
+
+table.Doniza_data_table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+table.Doniza_data_table th, table.Doniza_data_table td { border: 1px solid #000; padding: 8px; }
+table.Doniza_data_table th { background: #f2f2f2; font-weight: bold; text-transform: uppercase; font-size: 11px; }
+
+.Doniza_text_center { text-align: center; }
+.Doniza_kosong { text-align: center; padding: 20px; color: #777; font-style: italic; }
+
+.Doniza_rekap_title { margin: 25px 0 8px; text-transform: uppercase; font-size: 13px; }
+.Doniza_rekap_box { display: flex; gap: 10px; flex-wrap: wrap; }
+.Doniza_rekap_item { padding: 8px 12px; background: #f9fafb; border: 1px solid #e5e7eb; font-weight: bold; }
+
+.Doniza_total_row { background: #f2f2f2; font-weight: bold; }
+
+.Doniza_ttd_container { margin-top: 50px; float: right; text-align: center; width: 220px; }
+.Doniza_ttd_space { height: 70px; }
+.Doniza_ttd_container p { margin: 2px 0; }
+
+@media print {
+  .Doniza_no_print { display: none !important; }
+  body { padding: 0; }
+}

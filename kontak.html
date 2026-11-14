@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - SMAN 10 Tasikmalaya</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="kontak">
+
+  <header class="Doniza_topbar">
+    <div class="Doniza_topbar_left">
+      <button id="Doniza_menuBtn" class="Doniza_menu_btn" aria-label="Buka/tutup menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <span class="Doniza_brand">SMAN 10 TASIKMALAYA</span>
+    </div>
+    <div class="Doniza_topbar_user">
+      <span class="Doniza_d_none_sm">Administrator</span>
+      <div class="Doniza_avatar">AD</div>
+    </div>
+  </header>
+
+  <div class="Doniza_layout">
+    <aside id="Doniza_sidebar" class="Doniza_sidebar">
+      <nav>
+        <a href="index.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="siswa.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-users"></i>
+          <span>Siswa</span>
+        </a>
+        <a href="guru.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Guru</span>
+        </a>
+        <a href="jadwal.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jadwal</span>
+        </a>
+        <a href="absensi.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-square-check"></i>
+          <span>Absensi</span>
+        </a>
+        <a href="nilai.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Nilai</span>
+        </a>
+        <a href="laporan.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Laporan</span>
+        </a>
+        <a href="kontak.html" class="Doniza_nav_link Doniza_active">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Kontak</span>
+        </a>
+      </nav>
+      <a href="login.html" class="Doniza_nav_link Doniza_nav_logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </aside>
+
+    <main class="Doniza_content">
+      <div class="Doniza_page_head">
+        <div>
+          <h1 class="Doniza_page_title">Hubungi Kami</h1>
+          <p class="Doniza_page_sub">Kirim pesan, kritik, atau saran kepada pengelola website SMAN 10 Tasikmalaya</p>
+        </div>
+      </div>
+
+      <div id="Doniza_notif"></div>
+
+      <div class="Doniza_contact_grid">
+
+        <section class="Doniza_card Doniza_card_pad">
+          <h3 class="Doniza_card_title">Informasi Sekolah</h3>
+          <ul class="Doniza_info_list">
+            <li class="Doniza_info_item">
+              <span class="Doniza_info_icon Doniza_ic_blue"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <strong>Alamat</strong>
+                <p>Jl. Contoh Pendidikan No. 10, Kota Tasikmalaya, Jawa Barat 46115</p>
+              </div>
+            </li>
+            <li class="Doniza_info_item">
+              <span class="Doniza_info_icon Doniza_ic_green"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <strong>Telepon</strong>
+                <p><a href="tel:+62265000010">(0265) 000-010</a></p>
+              </div>
+            </li>
+            <li class="Doniza_info_item">
+              <span class="Doniza_info_icon Doniza_ic_purple"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:info@sman10tasikmalaya.sch.id">info@sman10tasikmalaya.sch.id</a></p>
+              </div>
+            </li>
+            <li class="Doniza_info_item">
+              <span class="Doniza_info_icon Doniza_ic_orange"><i class="fa-solid fa-clock"></i></span>
+              <div>
+                <strong>Jam Layanan</strong>
+                <p>Senin - Jumat, 07.00 - 15.00 WIB</p>
+              </div>
+            </li>
+          </ul>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=SMAN+10+Tasikmalaya" target="_blank" rel="noopener" class="Doniza_link_arrow">
+            <span>Lihat lokasi di Google Maps</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </section>
+
+        <section class="Doniza_card Doniza_card_pad">
+          <h3 class="Doniza_card_title">Kirim Pesan</h3>
+          <form id="Doniza_formKontak" class="Doniza_form_stack" novalidate>
+            <div class="Doniza_form_group">
+              <label for="Doniza_kNama">Nama Lengkap</label>
+              <input type="text" id="Doniza_kNama" name="nama" class="Doniza_field" placeholder="Masukkan nama lengkap" autocomplete="name">
+              <small class="Doniza_field_error" data-error-for="nama" hidden></small>
+            </div>
+            <div class="Doniza_form_group">
+              <label for="Doniza_kEmail">Email</label>
+              <input type="email" id="Doniza_kEmail" name="email" class="Doniza_field" placeholder="nama@email.com" autocomplete="email">
+              <small class="Doniza_field_error" data-error-for="email" hidden></small>
+            </div>
+            <div class="Doniza_form_group">
+              <label for="Doniza_kSubjek">Keperluan</label>
+              <select id="Doniza_kSubjek" name="subjek" class="Doniza_field">
+                <option value="">-- Pilih Keperluan --</option>
+                <option>Informasi Umum</option>
+                <option>Data Siswa / Guru</option>
+                <option>Jadwal &amp; Absensi</option>
+                <option>Nilai &amp; Laporan</option>
+                <option>Kritik dan Saran</option>
+              </select>
+              <small class="Doniza_field_error" data-error-for="subjek" hidden></small>
+            </div>
+            <div class="Doniza_form_group">
+              <label for="Doniza_kPesan">Pesan</label>
+              <textarea id="Doniza_kPesan" name="pesan" class="Doniza_field" rows="5" maxlength="500" placeholder="Tulis pesan Anda di sini..."></textarea>
+              <div class="Doniza_field_meta">
+                <small class="Doniza_field_error" data-error-for="pesan" hidden></small>
+                <small class="Doniza_char_count" id="Doniza_kHitung">0 / 500</small>
+              </div>
+            </div>
+            <div class="Doniza_form_actions">
+              <button type="reset" class="Doniza_btn Doniza_btn_light" id="Doniza_btnResetKontak">Reset</button>
+              <button type="submit" class="Doniza_btn Doniza_btn_primary"><i class="fa-solid fa-paper-plane"></i> Kirim Pesan</button>
+            </div>
+          </form>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

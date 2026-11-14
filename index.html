@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAN 10 Tasikmalaya</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+
+  <header class="Doniza_topbar">
+    <div class="Doniza_topbar_left">
+      <button id="Doniza_menuBtn" class="Doniza_menu_btn" aria-label="Buka/tutup menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <span class="Doniza_brand">SMAN 10 TASIKMALAYA</span>
+    </div>
+    <div class="Doniza_topbar_user">
+      <span class="Doniza_d_none_sm">Administrator</span>
+      <div class="Doniza_avatar">AD</div>
+    </div>
+  </header>
+
+  <div class="Doniza_layout">
+    <aside id="Doniza_sidebar" class="Doniza_sidebar">
+      <nav>
+        <a href="index.html" class="Doniza_nav_link Doniza_active">
+          <i class="fa-solid fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="siswa.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-users"></i>
+          <span>Siswa</span>
+        </a>
+        <a href="guru.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Guru</span>
+        </a>
+        <a href="jadwal.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jadwal</span>
+        </a>
+        <a href="absensi.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-square-check"></i>
+          <span>Absensi</span>
+        </a>
+        <a href="nilai.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Nilai</span>
+        </a>
+        <a href="laporan.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Laporan</span>
+        </a>
+        <a href="kontak.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Kontak</span>
+        </a>
+      </nav>
+      <a href="login.html" class="Doniza_nav_link Doniza_nav_logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </aside>
+
+    <main class="Doniza_content">
+      <div class="Doniza_page_head">
+        <div>
+          <h1 class="Doniza_page_title">Selamat Datang, Di SMAN 10 Tasikmalaya</h1>
+          <p class="Doniza_page_sub">Berikut adalah ringkasan data sekolah</p>
+        </div>
+        <div class="Doniza_date_chip" id="Doniza_tanggalHariIni">--</div>
+      </div>
+
+      <div class="Doniza_stats">
+        <div class="Doniza_card Doniza_stat">
+          <div class="Doniza_stat_icon Doniza_ic_blue"><i class="fa-solid fa-users"></i></div>
+          <div><div class="Doniza_stat_value">25</div><div class="Doniza_stat_label">Siswa</div></div>
+        </div>
+        <div class="Doniza_card Doniza_stat">
+          <div class="Doniza_stat_icon Doniza_ic_green"><i class="fa-solid fa-user-graduate"></i></div>
+          <div><div class="Doniza_stat_value">12</div><div class="Doniza_stat_label">Guru</div></div>
+        </div>
+        <div class="Doniza_card Doniza_stat">
+          <div class="Doniza_stat_icon Doniza_ic_purple"><i class="fa-solid fa-school"></i></div>
+          <div><div class="Doniza_stat_value">5</div><div class="Doniza_stat_label">Kelas</div></div>
+        </div>
+        <div class="Doniza_card Doniza_stat">
+          <div class="Doniza_stat_icon Doniza_ic_orange"><i class="fa-solid fa-user-check"></i></div>
+          <div><div class="Doniza_stat_value">85%</div><div class="Doniza_stat_label">Kehadiran</div></div>
+        </div>
+      </div>
+
+      <div class="Doniza_grid_2">
+
+        <div class="Doniza_card Doniza_card_pad">
+          <h3 class="Doniza_card_title">Absensi Keseluruhan</h3>
+          <div class="Doniza_chart_wrap">
+            <div class="Doniza_pie" style="background: conic-gradient(#2ecc71 0 84.62%, #f1c40f 84.62% 90.92%, #e67e22 90.92% 96.15%, #e74c3c 96.15% 100%);" role="img" aria-label="Diagram absensi keseluruhan"></div>
+            <div class="Doniza_legend">
+              <div><span class="Doniza_dot" style="background:#2ecc71"></span><span>Hadir (550)</span></div>
+              <div><span class="Doniza_dot" style="background:#f1c40f"></span><span>Izin (41)</span></div>
+              <div><span class="Doniza_dot" style="background:#e67e22"></span><span>Sakit (34)</span></div>
+              <div><span class="Doniza_dot" style="background:#e74c3c"></span><span>Alpha (25)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Doniza_card Doniza_card_pad">
+          <h3 class="Doniza_card_title">Jadwal Hari Ini (<span id="Doniza_hariIni">-</span>)</h3>
+        <div class="Doniza_jadwal_hari" data-hari="Senin" hidden>
+          <div class="Doniza_jadwal_item">
+            <span>1. Matematika</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>2. Fisika</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 2</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>3. PJOK</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>4. Matematika</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>5. Ekonomi</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>6. Bahasa Indonesia</span>
+            <span>08.30 - 10.00</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+        </div>
+        <div class="Doniza_jadwal_hari" data-hari="Selasa" hidden>
+          <div class="Doniza_jadwal_item">
+            <span>1. Kimia</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>2. Pendidikan Agama Islam</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 2</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>3. Bahasa Inggris</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>4. Sejarah</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>5. PJOK</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>6. Biologi</span>
+            <span>08.30 - 10.00</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+        </div>
+        <div class="Doniza_jadwal_hari" data-hari="Rabu" hidden>
+          <div class="Doniza_jadwal_item">
+            <span>1. Matematika</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>2. Fisika</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 2</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>3. PJOK</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>4. Pendidikan Agama Islam</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>5. Bahasa Inggris</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>6. Bahasa Indonesia</span>
+            <span>08.30 - 10.00</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+        </div>
+        <div class="Doniza_jadwal_hari" data-hari="Kamis" hidden>
+          <div class="Doniza_jadwal_item">
+            <span>1. Kimia</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>2. Pendidikan Agama Islam</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 2</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>3. Bahasa Inggris</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>4. Ekonomi</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>5. Sosiologi</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>6. Biologi</span>
+            <span>08.30 - 10.00</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+        </div>
+        <div class="Doniza_jadwal_hari" data-hari="Jumat" hidden>
+          <div class="Doniza_jadwal_item">
+            <span>1. Matematika</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>2. Fisika</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPA 2</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>3. PJOK</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPA 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>4. PJOK</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas X IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>5. Bahasa Indonesia</span>
+            <span>07.00 - 08.30</span>
+            <span>Kelas XI IPS 1</span>
+          </div>
+          <div class="Doniza_jadwal_item">
+            <span>6. Bahasa Indonesia</span>
+            <span>08.30 - 10.00</span>
+            <span>Kelas X IPA 1</span>
+          </div>
+        </div>
+          <div class="Doniza_empty_note" id="Doniza_jadwalKosong" hidden>Tidak ada jadwal pelajaran untuk hari ini.</div>
+          <a href="jadwal.html" class="Doniza_link_arrow">
+            <span>Lihat semua jadwal</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

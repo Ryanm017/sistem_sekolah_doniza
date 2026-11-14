@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cetak Laporan - SMAN 10 Tasikmalaya</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body data-page="print_absensi">
+    <div class="Doniza_print_toolbar Doniza_no_print">
+        <button type="button" id="Doniza_btnCetakUlang">Cetak</button>
+        <button type="button" id="Doniza_btnTutup" class="Doniza_secondary">Tutup</button>
+    </div>
+    <div class="Doniza_kop_surat">
+        <img src="images/logo.png" alt="Logo Sekolah" class="Doniza_logo_kop" onerror="this.style.display='none'">
+        <div class="Doniza_text_kop">
+            <h2>Pemerintah Daerah Provinsi Jawa Barat<br>Dinas Pendidikan Wilayah XII<br>SMAN 10 Tasikmalaya</h2>
+            <p>Jl. Karikil, Mangkubumi, Kec. Mangkubumi, Kota Tasikmalaya, Jawa Barat 46181</p>
+        </div>
+    </div>
+    <h3 class="Doniza_judul Doniza_lg">Laporan Rekapitulasi Absensi Siswa</h3>
+    <table class="Doniza_info_siswa">
+        <tr>
+            <td class="Doniza_label">NIS</td><td class="Doniza_titik">:</td><td id="Doniza_pNis">-</td>
+            <td class="Doniza_label">Jurusan</td><td class="Doniza_titik">:</td><td id="Doniza_pJurusan">-</td>
+        </tr>
+        <tr>
+            <td class="Doniza_label">Nama Lengkap</td><td class="Doniza_titik">:</td><td id="Doniza_pNama" style="font-weight: bold;">-</td>
+            <td class="Doniza_label">Kelas</td><td class="Doniza_titik">:</td><td id="Doniza_pKelas">-</td>
+        </tr>
+        <tr>
+            <td class="Doniza_label">Jenis Kelamin</td><td class="Doniza_titik">:</td><td id="Doniza_pJk">-</td>
+            <td class="Doniza_label">Periode</td><td class="Doniza_titik">:</td><td id="Doniza_pPeriode">-</td>
+        </tr>
+    </table>
+    <table class="Doniza_data_table">
+        <thead>
+            <tr>
+                <th width="8%" class="Doniza_text_center">No</th>
+                <th width="30%">Hari, Tanggal</th>
+                <th width="25%" class="Doniza_text_center">Status Kehadiran</th>
+            </tr>
+        </thead>
+        <tbody id="Doniza_tbodyData"></tbody>
+    </table>
+
+    <h4 class="Doniza_rekap_title">Total Akumulasi Ketidakhadiran:</h4>
+    <div class="Doniza_rekap_box">
+        <div class="Doniza_rekap_item" style="border-left: 4px solid #10b981;">Hadir: <span id="Doniza_tHadir">0</span> Hari</div>
+        <div class="Doniza_rekap_item" style="border-left: 4px solid #f59e0b;">Sakit (S): <span id="Doniza_tSakit">0</span> Hari</div>
+        <div class="Doniza_rekap_item" style="border-left: 4px solid #3b82f6;">Izin (I): <span id="Doniza_tIzin">0</span> Hari</div>
+        <div class="Doniza_rekap_item" style="border-left: 4px solid #ef4444;">Alpa (A): <span id="Doniza_tAlpa">0</span> Hari</div>
+    </div>
+    <div class="Doniza_ttd_container">
+        <p id="Doniza_ttdTanggal">Tasikmalaya</p>
+        <p>Wali Kelas,</p>
+        <div class="Doniza_ttd_space"></div>
+        <p style="text-decoration: underline; font-weight: bold;">........................................</p>
+        <p style="font-size: 10px; color: #555;">NIP. ....................................</p>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/print.js"></script>
+</body>
+</html>

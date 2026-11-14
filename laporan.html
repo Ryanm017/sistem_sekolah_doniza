@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAN 10 Tasikmalaya</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="laporan">
+
+  <header class="Doniza_topbar">
+    <div class="Doniza_topbar_left">
+      <button id="Doniza_menuBtn" class="Doniza_menu_btn" aria-label="Buka/tutup menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <span class="Doniza_brand">SMAN 10 TASIKMALAYA</span>
+    </div>
+    <div class="Doniza_topbar_user">
+      <span class="Doniza_d_none_sm">Administrator</span>
+      <div class="Doniza_avatar">AD</div>
+    </div>
+  </header>
+
+  <div class="Doniza_layout">
+    <aside id="Doniza_sidebar" class="Doniza_sidebar">
+      <nav>
+        <a href="index.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="siswa.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-users"></i>
+          <span>Siswa</span>
+        </a>
+        <a href="guru.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Guru</span>
+        </a>
+        <a href="jadwal.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jadwal</span>
+        </a>
+        <a href="absensi.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-square-check"></i>
+          <span>Absensi</span>
+        </a>
+        <a href="nilai.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Nilai</span>
+        </a>
+        <a href="laporan.html" class="Doniza_nav_link Doniza_active">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Laporan</span>
+        </a>
+        <a href="kontak.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Kontak</span>
+        </a>
+      </nav>
+      <a href="login.html" class="Doniza_nav_link Doniza_nav_logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </aside>
+
+    <main class="Doniza_content">
+      <h1 class="Doniza_page_title" style="margin-bottom:32px;padding-left:8px">Laporan Sistem Sekolah</h1>
+
+      <div class="Doniza_report_grid">
+        <div class="Doniza_report_card">
+          <div class="Doniza_report_icon" style="background:#dedeff"><i class="fa-solid fa-users" style="color:#1877f2"></i></div>
+          <div class="Doniza_report_body">
+            <div>
+              <h2>Laporan Data Siswa</h2>
+              <p>Lihat dan cetak seluruh log data siswa aktif</p>
+            </div>
+            <a href="print_siswa.html" target="_blank" class="Doniza_btn_print">
+              <i class="fa-solid fa-print"></i> <span>Cetak Laporan</span>
+            </a>
+          </div>
+        </div>
+        <div class="Doniza_report_card">
+          <div class="Doniza_report_icon" style="background:#e2f3e2"><i class="fa-solid fa-user-tie" style="color:#2ca02c"></i></div>
+          <div class="Doniza_report_body">
+            <div>
+              <h2>Laporan Data Guru</h2>
+              <p>Lihat dan cetak arsip berkas data guru</p>
+            </div>
+            <a href="print_guru.html" target="_blank" class="Doniza_btn_print">
+              <i class="fa-solid fa-print"></i> <span>Cetak Laporan</span>
+            </a>
+          </div>
+        </div>
+        <div class="Doniza_report_card">
+          <div class="Doniza_report_icon" style="background:#f4ebd0"><span style="width:40px;height:40px;background:#b08d00;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px"><i class="fa-solid fa-square-check"></i></span></div>
+          <div class="Doniza_report_body">
+            <div>
+              <h2>Laporan Absensi</h2>
+              <p>Lihat dan cetak rekapan absensi kelas siswa</p>
+            </div>
+            <a href="laporan_absensi_filter.html" target="_blank" class="Doniza_btn_print">
+              <i class="fa-solid fa-print"></i> <span>Cetak Laporan</span>
+            </a>
+          </div>
+        </div>
+        <div class="Doniza_report_card">
+          <div class="Doniza_report_icon" style="background:#dad9ff"><i class="fa-solid fa-chart-simple" style="color:#000075"></i></div>
+          <div class="Doniza_report_body">
+            <div>
+              <h2>Laporan Nilai</h2>
+              <p>Lihat dan cetak lembaran rekapitulasi nilai siswa</p>
+            </div>
+            <a href="laporan_nilai_filter.html" target="_blank" class="Doniza_btn_print">
+              <i class="fa-solid fa-print"></i> <span>Cetak Laporan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

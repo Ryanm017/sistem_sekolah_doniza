@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAN 10 Tasikmalaya</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="siswa">
+
+  <header class="Doniza_topbar">
+    <div class="Doniza_topbar_left">
+      <button id="Doniza_menuBtn" class="Doniza_menu_btn" aria-label="Buka/tutup menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <span class="Doniza_brand">SMAN 10 TASIKMALAYA</span>
+    </div>
+    <div class="Doniza_topbar_user">
+      <span class="Doniza_d_none_sm">Administrator</span>
+      <div class="Doniza_avatar">AD</div>
+    </div>
+  </header>
+
+  <div class="Doniza_layout">
+    <aside id="Doniza_sidebar" class="Doniza_sidebar">
+      <nav>
+        <a href="index.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="siswa.html" class="Doniza_nav_link Doniza_active">
+          <i class="fa-solid fa-users"></i>
+          <span>Siswa</span>
+        </a>
+        <a href="guru.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Guru</span>
+        </a>
+        <a href="jadwal.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jadwal</span>
+        </a>
+        <a href="absensi.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-square-check"></i>
+          <span>Absensi</span>
+        </a>
+        <a href="nilai.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Nilai</span>
+        </a>
+        <a href="laporan.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Laporan</span>
+        </a>
+        <a href="kontak.html" class="Doniza_nav_link">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Kontak</span>
+        </a>
+      </nav>
+      <a href="login.html" class="Doniza_nav_link Doniza_nav_logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </aside>
+
+    <main class="Doniza_content">
+      <h1 class="Doniza_page_title">Data Siswa</h1>
+
+      <div id="Doniza_notif"></div>
+
+    <div class="Doniza_filter_card">
+      <span class="Doniza_label">Jurusan:</span>
+      <div class="Doniza_pills" id="Doniza_pillsJurusan">
+        <button type="button" class="Doniza_pill Doniza_active" data-value="1">IPA</button>
+        <button type="button" class="Doniza_pill" data-value="2">IPS</button>
+      </div>
+    </div>
+
+      <div class="Doniza_toolbar">
+        <input type="text" id="Doniza_search" class="Doniza_search_input" placeholder="Cari siswa atau kelas...">
+        <button type="button" id="Doniza_btnTambah" class="Doniza_btn Doniza_btn_primary">+ Tambah Siswa</button>
+      </div>
+
+      <div class="Doniza_table_card">
+        <div class="Doniza_table_wrap">
+          <table class="Doniza_data Doniza_w_800">
+            <thead>
+              <tr>
+                <th class="Doniza_c" style="width:64px">No</th>
+                <th>NIS</th>
+                <th>Nama</th>
+                <th>Jurusan</th>
+                <th>Kelas</th>
+                <th>Jenis Kelamin</th>
+                <th class="Doniza_c" style="width:128px">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="Doniza_tbodySiswa">
+              <tr data-row data-nis="12401" data-nama="Ahmad Fauzi Ramadhan" data-jurusan="1" data-kelas="1" data-kelas-nama="X IPA 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12401</td>
+                <td class="Doniza_strong">Ahmad Fauzi Ramadhan</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12402" data-nama="Aisyah Nur Azizah" data-jurusan="1" data-kelas="1" data-kelas-nama="X IPA 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12402</td>
+                <td class="Doniza_strong">Aisyah Nur Azizah</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12403" data-nama="Bagas Prasetyo" data-jurusan="1" data-kelas="1" data-kelas-nama="X IPA 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12403</td>
+                <td class="Doniza_strong">Bagas Prasetyo</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12404" data-nama="Citra Dewi Anggraini" data-jurusan="1" data-kelas="1" data-kelas-nama="X IPA 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12404</td>
+                <td class="Doniza_strong">Citra Dewi Anggraini</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12405" data-nama="Dimas Arya Pratama" data-jurusan="1" data-kelas="1" data-kelas-nama="X IPA 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12405</td>
+                <td class="Doniza_strong">Dimas Arya Pratama</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12406" data-nama="Eka Putri Maharani" data-jurusan="1" data-kelas="2" data-kelas-nama="X IPA 2" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12406</td>
+                <td class="Doniza_strong">Eka Putri Maharani</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 2</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12407" data-nama="Fajar Nugraha" data-jurusan="1" data-kelas="2" data-kelas-nama="X IPA 2" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12407</td>
+                <td class="Doniza_strong">Fajar Nugraha</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 2</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12408" data-nama="Gina Salsabila" data-jurusan="1" data-kelas="2" data-kelas-nama="X IPA 2" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12408</td>
+                <td class="Doniza_strong">Gina Salsabila</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 2</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12409" data-nama="Hafidz Maulana" data-jurusan="1" data-kelas="2" data-kelas-nama="X IPA 2" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12409</td>
+                <td class="Doniza_strong">Hafidz Maulana</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 2</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12410" data-nama="Intan Permatasari" data-jurusan="1" data-kelas="2" data-kelas-nama="X IPA 2" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12410</td>
+                <td class="Doniza_strong">Intan Permatasari</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>X IPA 2</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12416" data-nama="Okta Viani" data-jurusan="2" data-kelas="4" data-kelas-nama="X IPS 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12416</td>
+                <td class="Doniza_strong">Okta Viani</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>X IPS 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12417" data-nama="Putra Wijaya Kusuma" data-jurusan="2" data-kelas="4" data-kelas-nama="X IPS 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12417</td>
+                <td class="Doniza_strong">Putra Wijaya Kusuma</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>X IPS 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12418" data-nama="Qonita Fadhilah" data-jurusan="2" data-kelas="4" data-kelas-nama="X IPS 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12418</td>
+                <td class="Doniza_strong">Qonita Fadhilah</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>X IPS 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12419" data-nama="Rizal Anwar" data-jurusan="2" data-kelas="4" data-kelas-nama="X IPS 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12419</td>
+                <td class="Doniza_strong">Rizal Anwar</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>X IPS 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12420" data-nama="Sinta Nuraeni" data-jurusan="2" data-kelas="4" data-kelas-nama="X IPS 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12420</td>
+                <td class="Doniza_strong">Sinta Nuraeni</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>X IPS 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12411" data-nama="Jaka Permana" data-jurusan="1" data-kelas="3" data-kelas-nama="XI IPA 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12411</td>
+                <td class="Doniza_strong">Jaka Permana</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>XI IPA 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12412" data-nama="Kirana Azzahra" data-jurusan="1" data-kelas="3" data-kelas-nama="XI IPA 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12412</td>
+                <td class="Doniza_strong">Kirana Azzahra</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>XI IPA 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12413" data-nama="Lutfi Hakim" data-jurusan="1" data-kelas="3" data-kelas-nama="XI IPA 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12413</td>
+                <td class="Doniza_strong">Lutfi Hakim</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>XI IPA 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12414" data-nama="Maya Sari Utami" data-jurusan="1" data-kelas="3" data-kelas-nama="XI IPA 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12414</td>
+                <td class="Doniza_strong">Maya Sari Utami</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>XI IPA 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12415" data-nama="Naufal Rizky Firmansyah" data-jurusan="1" data-kelas="3" data-kelas-nama="XI IPA 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12415</td>
+                <td class="Doniza_strong">Naufal Rizky Firmansyah</td>
+                <td><span class="Doniza_badge">IPA</span></td>
+                <td>XI IPA 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12421" data-nama="Taufik Hidayat" data-jurusan="2" data-kelas="5" data-kelas-nama="XI IPS 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12421</td>
+                <td class="Doniza_strong">Taufik Hidayat</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>XI IPS 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12422" data-nama="Ulfa Rahmawati" data-jurusan="2" data-kelas="5" data-kelas-nama="XI IPS 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12422</td>
+                <td class="Doniza_strong">Ulfa Rahmawati</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>XI IPS 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12423" data-nama="Vina Melati" data-jurusan="2" data-kelas="5" data-kelas-nama="XI IPS 1" data-jk="Perempuan">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12423</td>
+                <td class="Doniza_strong">Vina Melati</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>XI IPS 1</td>
+                <td class="Doniza_muted">Perempuan</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12424" data-nama="Wahyu Ramdani" data-jurusan="2" data-kelas="5" data-kelas-nama="XI IPS 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12424</td>
+                <td class="Doniza_strong">Wahyu Ramdani</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>XI IPS 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr data-row data-nis="12425" data-nama="Yusuf Abdurrahman" data-jurusan="2" data-kelas="5" data-kelas-nama="XI IPS 1" data-jk="Laki-Laki">
+                <td class="Doniza_text_center Doniza_muted"></td>
+                <td class="Doniza_muted">12425</td>
+                <td class="Doniza_strong">Yusuf Abdurrahman</td>
+                <td><span class="Doniza_badge">IPS</span></td>
+                <td>XI IPS 1</td>
+                <td class="Doniza_muted">Laki-Laki</td>
+                <td><div class="Doniza_actions">
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_edit Doniza_js_edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="Doniza_btn_icon Doniza_btn_delete Doniza_js_delete" title="Hapus"><i class="fa-solid fa-trash"></i></button>
+                </div></td>
+              </tr>
+              <tr class="Doniza_empty_row" hidden><td colspan="7">Tidak ada data siswa ditemukan untuk kategori ini.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="Doniza_formModal" class="Doniza_modal_backdrop">
+    <div class="Doniza_modal">
+      <div class="Doniza_modal_head">
+        <h3><i class="fa-solid fa-user-plus"></i><span id="Doniza_modalTitle">Tambah Data Siswa Baru</span></h3>
+        <button type="button" class="Doniza_modal_close" data-close-modal aria-label="Tutup">&times;</button>
+      </div>
+
+      <form id="Doniza_formSiswa" class="Doniza_form_stack">
+        <div id="Doniza_formError"></div>
+        <div class="Doniza_form_group">
+          <label>Nomor Induk Siswa (NIS)</label>
+          <input type="text" name="nis" class="Doniza_field" placeholder="Contoh: 12455" required>
+        </div>
+        <div class="Doniza_form_group">
+          <label>Nama Lengkap Siswa</label>
+          <input type="text" name="nama" class="Doniza_field" placeholder="Masukkan nama lengkap" required>
+        </div>
+        <div class="Doniza_form_group">
+          <label>Jurusan</label>
+          <select id="Doniza_fJurusan" class="Doniza_field" required></select>
+        </div>
+        <div class="Doniza_form_group">
+          <label>Pilihan Kelas</label>
+          <select id="Doniza_fKelas" class="Doniza_field" required disabled></select>
+        </div>
+        <div class="Doniza_form_group">
+          <label>Jenis Kelamin</label>
+          <div class="Doniza_radio_row">
+            <label><input type="radio" name="jk" value="Laki-Laki" checked><span>Laki-Laki</span></label>
+            <label><input type="radio" name="jk" value="Perempuan"><span>Perempuan</span></label>
+          </div>
+        </div>
+        <div class="Doniza_modal_foot">
+          <button type="button" class="Doniza_btn Doniza_btn_light" data-close-modal>Batal</button>
+          <button type="submit" class="Doniza_btn Doniza_btn_primary Doniza_btn_sm">Simpan Data</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
